@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Carrito de Compras</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- //custom-theme -->
+	
+	<link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
+	<!-- Owl-carousel-CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="colores.css">
+
+  </head>
+
+<body>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke p-0">
+                <h1> <a class="navbar-brand" href="index.html">
+                        <span class="fa fa-bell-o"></span> Drawing Graphics
+                    </a></h1>
+                <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-5 mr-lg-auto">
+                        <li class="nav-item @@home__active">
+                            <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item @@about__active">
+                            <a class="nav-link" href="about.html">Info</a>
+                        </li>
+                        <li class="nav-item @@registro__active">
+                            <a class="nav-link" href="registro.html">Registro</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="carrito.html">Carrito de Compras</a>
+                        </li>
+                        <li class="nav-item @@3D__active">
+                          <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
+                        </li>
+                    </ul>
+      
+                    <!--/search-right-->
+                    <div class="navbar-nav search-right nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="catalogo3D.html" id="navbarDropdown" role="button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-search"></span>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <div class="search_form">
+                              <form action="catalogo3D.html" method="GET">
+                                  <input type="text" name="search" placeholder="Search">
+                                  <button type="submit" class="btn" value=""><span class="fa fa-search"
+                                          aria-hidden="true"></span></button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+
+                    <!--//search-right-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+<!--/header-->
+<!-- about breadcrumb -->
+<div class="w3l-about-breadcrumb w3l-search-results py-5 text-center">
+    <div class="container py-lg-4 py-md-3">
+        <ul class="breadcrumbs-custom-path mb-sm-3 mb-2 text-center">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Carrito de Compras </li>
+        </ul>
+        <h3 class="title-big">Carrito de Compras</h3>
+    </div>
+</div>
+<div class="grids py-lg-5 py-md-4">
+<!-- carrito -->
+
+
+    <div id="cart-items">
+        <ul id="cart-list"></ul>
+    </div>
+    <div container py-lg-3 py-md-3>
+    <div class="d-flex justify-content-center">
+      <h3 class="tih3tle-big">Visualizar Productos</h3>
+      
+        <form action="#" method="post">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add">
+            <input type="hidden" name="shoe_item">
+            <input type="hidden" name="amount">
+            <button type="submit" class="shoe-cart pshoe-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+        </form>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/minicart.js"></script>
+    <script>
+        shoe.render();
+
+        shoe.cart.on('shoe_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+                var cartList = document.getElementById('cart-list');
+
+                for (i = 0, len = items.length; i < len; i++) {
+                    var item = items[i];
+                    var listItem = document.createElement('li');
+                    listItem.textContent = item.name + ' - $' + item.price.toFixed(2);
+                    cartList.appendChild(listItem);
+                }
+            }
+        });
+    </script>
+
+
+<!-- footer -->
+<footer class="py-5">
+<div class="container pt-md-5">
+    <div class="footer-logo mb-lg-5 mb-4 text-center">
+    <a class="navbar-brand" href="index.html"><span class="fa fa-bell-o"></span> Drawing Graphics</a>
+    <p>We want to provide you with a great experience. Your feedback helps us
+        bring you more of the events you love and the service you expect.</p>
+    </div>
+    <div class="footer-grid">
+    <div class="w3l-copyright text-center">
+        <ul class="d-flex justify-content-center">
+          <li class="mx-md-2 mx-1"><a href="https://www.facebook.com/Drawingraps/" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="https://wa.me/message/GBELSTLL64NSO1" class="whatsapp"><span class="fab fa-whatsapp"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="https://www.instagram.com/drw.26/" class="instagram"><span class="fab fa-instagram"></span></a></li>     
+        </ul>
+        <p class="mt-4">Proyecto Final. Tienda Online | <a href="#"
+          target="=_blank"> Drawing Graphics
+        </a></p>
+    </div>
+    </div>
+
+</div>
+</footer>	
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- cart-js -->
+
+	<script src="js/minicart.js"></script>
+
+	<script>
+		shoe.render();
+
+		shoe.cart.on('shoe_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) { }
+			}
+		});
+	</script>
+
+  <!-- move top -->
+  <button onclick="topFunction()" id="movetop" title="Go to top">
+    &#10548;
+  </button>
+
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- /move top -->
+
+  <script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
+
+  <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+
+  <!-- owlcarousel -->
+  <script src="assets/js/owl.carousel.js"></script>
+  <!-- script for banner typing text -->
+  <script>
+    function autoType(elementClass, typingSpeed) {
+      var thhis = $(elementClass);
+      thhis.css({
+        "position": "relative",
+        "display": "inline-block"
+      });
+      thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+      thhis = thhis.find(".text-js");
+      var text = thhis.text().trim().split('');
+      var amntOfChars = text.length;
+      var newString = "";
+      thhis.text("|");
+      setTimeout(function () {
+        thhis.css("opacity", 1);
+        thhis.prev().removeAttr("style");
+        thhis.text("");
+        for (var i = 0; i < amntOfChars; i++) {
+          (function (i, char) {
+            setTimeout(function () {
+              newString += char;
+              thhis.text(newString);
+            }, i * typingSpeed);
+          })(i + 1, text[i]);
+        }
+      }, 1500);
+    }
+
+    $(document).ready(function () {
+      // Now to start autoTyping just call the autoType function with the 
+      // class of outer div
+      // The second paramter is the speed between each letter is typed.   
+      autoType(".type-js", 200);
+    });
+  </script>
+  <!-- //script for banner typing text -->
+
+  <!-- script for carousel slider -->
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo1").owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 30,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          767: {
+            items: 2,
+            nav: false
+          },
+          992: {
+            items: 4,
+            nav: false
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for carousel slider -->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    shoe.render();
+
+    shoe.cart.on('shoe_checkout', function (evt) {
+        var items, len, i;
+
+        if (this.subtotal() > 0) {
+            items = this.items();
+
+            for (i = 0, len = items.length; i < len; i++) {}
+        }
+    });
+</script>
+
+<script>
+  // Obtener referencia a los elementos
+  const categoriaEscogida = document.getElementById('categoriaEscogida');
+  const categoryList = document.querySelector('.category_list');
+  const productosContainer = document.getElementById('productosContainer');
+
+  // Manejar el evento de clic en las categorías
+  categoryList.addEventListener('click', function (event) {
+      if (event.target.matches('a')) {
+          event.preventDefault();
+          const categoria = event.target.getAttribute('category');
+
+          // Filtrar y mostrar los productos según la categoría seleccionada
+          filtrarProductosPorCategoria(categoria);
+      }
+  });
+
+  // Filtrar y mostrar los productos según la categoría seleccionada
+  function filtrarProductosPorCategoria(categoria) {
+      const productos = document.querySelectorAll('.product-item');
+
+      productos.forEach(function (producto) {
+          const categoriaProducto = producto.getAttribute('category');
+
+          if (categoria === 'todos' || categoriaProducto === categoria) {
+              producto.style.display = 'block';
+          } else {
+              producto.style.display = 'none';
+          }
+      });
+  }
+</script>
+<script src="editable.js"></script>
+<!-- <section class="modal-compra modal--show"> -->
+<section class="modal-compra">
+<div class="container-modal-compra-exitosa">
+        <h2 class="modal-title">COMPRA EXITOSA</h2>
+        <img src="src/Joyas/check-removebg-preview.png" class="modal-img" alt="">
+        <p class="modal-close">Cerrar</p>
+</div>
+</section>
+
+</body>
+
+</html>

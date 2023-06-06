@@ -18,3 +18,12 @@ section img:hover {
     opacity: 20;
     filter: contrast(150%);
 }
+
+.centered-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+  

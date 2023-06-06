@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+.logo-cart{
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+header{
+    .container{
+        max-width: 1200px;
+        text-align: center;
+        margin: auto;
+    }
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        align-items: center;
+        position: relative;
+    }
+    .header-section div{
+        position: relative;
+    }
+    .header-section p{
+        position: absolute;
+        top: -8px;
+        right: -9px;
+        background-color: #fff;
+        padding: 1px 6px;
+        border-radius: 50%;
+        color: rgb(255, 106, 0);
+        font-weight: 700;
+        font-family: system-ui;
+        line-height: 18px;
+    }
+}
+
+.carrito{
+    padding-left: 10px;
+}
+
+.cart{
+    border-radius: 5px;
+    color: #fff;
+    background-color: #fff;
+}
+.cart:hover{
+    background-color: rgb(255, 106, 0);
+    transition-duration: 0.4s;
+}
+
+.modal-img{
+    width: 50%;
+    max-width: 300px;
+}
+
+.modal-compra{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.container-modal-compra-exitosa{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #0ABF53;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+.modal-title{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.modal-close{
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    padding: 1em 3em;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 200;
+    transition: background-color .3s;
+}
+
+.modal-close:hover{
+    color: rgb(255, 255, 255);
+    border: 3px solid;
+    background-color: #069403;
+    border-color: rgb(255, 255, 255);
+}

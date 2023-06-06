@@ -1,197 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Registro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Drawing Graphics</title>
-
-  <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
-  <link rel="stylesheet" href="colores.css">
-
+	<!-- //custom-theme -->
+	
+	<link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
+	<!-- Owl-carousel-CSS -->
+    
+    <link rel="stylesheet" href="css/categoria.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registro.css">
 </head>
 
 <body>
-<!--header-->
-<header id="site-header" class="fixed-top">
-  <div class="container">
-      <nav class="navbar navbar-expand-lg stroke p-0">
-          <h1> <a class="navbar-brand" href="index.html">
-                  <span class="fa fa-bell-o"></span> Drawing Graphics
-              </a></h1>
-          <!-- if logo is image enable this   
-  <a class="navbar-brand" href="#index.html">
-      <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-  </a> -->
-          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </button>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke p-0">
+                <h1> <a class="navbar-brand" href="index.html">
+                        <span class="fa fa-bell-o"></span> Drawing Graphics
+                    </a></h1>
+                <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-5 mr-lg-auto">
+                        <li class="nav-item @@home__active">
+                            <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item @@about_active">
+                          <a class="nav-link" href="about.html">Info</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="registro.html">Registro</a>
+                        </li>
+                        <li class="nav-item @@registro__active">
+                            <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
+                        </li>
+                        <li class="nav-item" id="cerrarS">
 
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav ml-lg-5 mr-lg-auto">
-                  <li class="nav-item @@home__active">
-                      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item @@about__active">
-                      <a class="nav-link" href="about.html">Info</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="registro.html">Registro</a>
-                  </li>
-                  <li class="nav-item @@carrito__active">
-                    <a class="nav-link" href="carrito.html">Carrito de Compras</a>
-                  </li>
-                  <li class="nav-item @@3D__active">
-                    <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
-                  </li>
-              </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" id="cerrar"></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" id="cerrar"></a>
+                        </li>
+                    </ul>
+                    
+                    <script>
 
-              <!--/search-right-->
-              <div class="navbar-nav search-right nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="catalogo3D.html" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="fa fa-search"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div class="search_form">
-                        <form action="catalogo3D.html" method="GET">
-                            <input type="text" name="search" placeholder="Search">
-                            <button type="submit" class="btn" value=""><span class="fa fa-search"
-                                    aria-hidden="true"></span></button>
-                        </form>
+                        const usuario = document.getElementById("cerrar");
+                        const logIn = document.getElementById("cerrarS");
+                        if (localStorage.getItem('mail')) {
+                          const elemento = localStorage.getItem('mail');
+                          usuario.innerHTML = '<li class="mx-md-2 mx-1"><a href="#" class="google"><span class="fa fa-user fa-lg"></span></a></li>'
+                          logIn.innerHTML = '<a class="nav-link" id="cerrarS" href="login.html">Cerrar Sesión</a>'
+                        } else {
+                          usuario.innerHTML = ""
+                          logIn.innerHTML = '<a class="nav-link" id="cerrarS" href="login.html">Iniciar Sesión</a>'
+                        }
+
+                    </script>
+
+
+                    <!--/search-right-->
+                    <div class="navbar-nav search-right nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#Pages" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-search"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="search_form">
+                                <form action="search-results.html" method="GET">
+                                    <input type="text" placeholder="Search">
+                                    <button type="submit" class="btn" value=""><span class="fa fa-search"
+                                            aria-hidden="true"></span></button>
+                                </form>
+                            </div>
+                            <div class="dropdown-divider" id="categoriaEscogida"></div>
+                            <div class="category_list"> 
+                                <a class="dropdown-item" category="todos" href="catalogo3D.html">Todos</a>
+                                <a class="dropdown-item" category="anillos" href="catalogo3D.html">Anillos</a>
+                                <a class="dropdown-item" category="pulseras" href="catalogo3D.html">Pulseras</a>
+                                <a class="dropdown-item" category="collares" href="catalogo3D.html">Collares</a>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!--//search-right-->
                 </div>
-            </div>
-              <!--//search-right-->
-          </div>
-          <!-- toggle switch for light and dark theme -->
-          <div class="mobile-position">
-              <nav class="navigation">
-                  <div class="theme-switch-wrapper">
-                      <label class="theme-switch" for="checkbox">
-                          <input type="checkbox" id="checkbox">
-                          <div class="mode-container">
-                              <i class="gg-sun"></i>
-                              <i class="gg-moon"></i>
-                          </div>
-                      </label>
-                  </div>
-              </nav>
-          </div>
-          <!-- //toggle switch for light and dark theme -->
-      </nav>
-  </div>
-</header>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                            <form class="carrito" action="#" method="post">
+                                <input type="hidden" name="cmd" value="_cart">
+                                <input type="hidden" name="add">
+                                <input type="hidden" name="shoe_item">
+                                <input type="hidden" name="amount">
+                                <button type="submit" class="cart"><img class="logo-cart" src="images2/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                                <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
 <!--/header-->
-<!-- contact breadcrumb -->
-<div class="w3l-contact-breadcrumb w3l-search-results py-5 text-center">
-  <div class="container py-lg-4 py-md-3">
-      <ul class="breadcrumbs-custom-path mb-sm-3 mb-2 text-center">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact page </li>
-      </ul>
-      <h3 class="title-big mb-4">Registrate con nosotros</h3>
-      <p>Queremos brindarle una gran experiencia, por eso queremos saber de usted. Tus comentarios nos ayudan
-        brindarle más de los eventos que ama y el servicio que espera.</p>
-  </div>
+<!-- about breadcrumb -->
+<div class="w3l-about-breadcrumb w3l-search-results py-5 text-center">
+    <div class="container py-lg-4 py-md-3">
+        <ul class="breadcrumbs-custom-path mb-sm-3 mb-2 text-center">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Registro </li>
+        </ul>
+        <h3 class="tih3tle-big">Registrate</h3>
+    </div>
 </div>
-<!-- contact breadcrumb -->
-<!-- contacts -->
-<section class="w3l-contact-7 pt-5" id="contact">
-  <div class="contacts-9 pt-lg-5 pt-md-4">
-      <div class="container">
-          <div class="top-map">
-              <div class="row map-content-9">
-                  <div class="col-lg-8">
-                      <p class="mb-4">Su dirección de correo electrónico no será publicada. Los campos obligatorios están marcados *</p>
-                      <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="">
-                          <div class="form-grid">
-                              <div class="input-field">
-                                  <label> Nombre</label>
-                                  <input type="text" name="w3lName" id="w3lName" placeholder="" required="">
-                              </div>
-                              <div class="input-field">
-                                  <label>  Email</label>
-                                  <input type="email" name="w3lSender" id="w3lSender" placeholder="" required="">
-                              </div>
-                              <div class="input-field">
-                                  <label> telefono </label>
-                                  <input type="text" name="w3lPhone" id="w3lPhone" placeholder="" required="">
-                              </div>
-                              <div class="input-field">
-                                  <label> Asunto </label>
-                                  <input type="text" name="w3lSubject" id="w3lSubject" placeholder="">
-                              </div>
-                          </div>
-                          <div class="input-field mt-4">
-                              <label>Ingrese su mensaje</label>
-                              <textarea name="w3lMessage" id="w3lMessage" placeholder=""></textarea>
-                          </div>
-                          <button type="submit" class="btn btn-primary btn-style mt-3">Entregar</button>
-                      </form>
-                  </div>
-                  <div class="col-lg-4 cont-details">
-                      <address>
-                          <h5 class="">Nuestra dirección</h5>
-                          <p><span class="fa fa-map-marker"></span>CLL 73 # 2 BN 87, Cali, Valle del Cauca</p>
 
-                          <h5 class="mt-4 pt-lg-3">Información telefónica</h5>
-                          <p><span class="fa fa-mobile"></span> <strong>whatsapp :</strong>
-                              <a href="tel:+1(12) 366 411 4999"> +57 317 5419550</a></p>
+<div class="contenedorR">
 
-                          <p> <span class="fa fa-envelope"></span> <strong>Email :</strong>
-                              <a href="mailto:mail@example.com"> mail@example.com</a></p>
+    <div class="Información">
+        <h1 style="color: #fd8c35;  margin: 20px;" > Crear Cuenta </h1>
+        <div class="textos">
 
-                          <h5 class="mt-4 pt-lg-3 mb-3">Siéntase libre de contactar con nosotros</h5>
-                          <p>Queremos brindarle una gran experiencia, por eso queremos saber de usted.
-                          .</p>
-                      </address>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="map mt-5">
-          <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63718.4275340372!2d-76.56722675136717!3d3.4940634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a96fad6d549d%3A0xd99473afdfcfa949!2sDRAWING%20DISE%C3%91OS%20Y%20ESTAMPADOS!5e0!3m2!1ses!2sco!4v1684971050464!5m2!1ses!2sco"
-              frameborder="0" style="border:0" allowfullscreen="%"></iframe>
-      </div>
-  </div>
-</section>
-<!-- //contacts -->
+            <p style="margin: 10px;"> Condiciones: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis placeat labore sint modi aut ipsa harum reiciendis tempora. Ut asdf asdfasf asdf a quos voluptatem cumque tenetur delectus cupiditate necessitatibus voluptatum. Laudantium, adipisci accusantium!</p>
+
+            <hr style="border: 1px solid #fd8c35;">
+            <p style="margin: 10px;"> Restricciones: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis placeat labore sint modi aut ipsa harum reiciendis tempora. Ut quos sadfasdf s fasdf ad fasf voluptatem cumque tenetur delectus cupiditate necessitatibus voluptatum. Laudantium, adipisci accusantium!</p>
+            
+        </div>
+      
+
+    </div>
+
+
+    <div class="registroC"> 
+    <form id="registro">
+
+        <div class="nuevo">
+
+            <div class="dato">
+            <label> <h3>Nombre y Apellido</h3> </label>
+            <input class="inpust" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+            </div>
+
+            <div class="dato">
+            <label> <h3>Número Telefónico</h3>  </label>
+            <input class="inpust" type="tel" id="telefono" name="telefono" placeholder="Ingrese su numero de contacto" required>
+            </div>
+
+            <div class="dato">
+            <label> <h3>Correo Electronico</h3> </label>
+            <input class="inpust" type="email" id="mail" name="correo" placeholder="User-solid@gmail.com" required>
+            </div>
+
+        </div>
+        <div class="nuevo">
+
+            <div class="dato">
+            <label> <h3>Dirreción</h3> </label>
+            <input class="inpust" type="text" id="dirreción" name="dirreción" placeholder="Cra 70 # 1 C 58" required>
+            </div>
+
+            <div class="dato">
+            <label><h3>Cedula</h3></label>
+            <input class="inpust" type="number" id="cedula" name="cedula" placeholder="145.456.0" required>
+            </div>
+            
+            <div class="dato">
+                <label> <h3>Contraseña</h3></label>
+                <input class="inpust" type="password" id="contraseña" name="contraseña" placeholder="****************" required>
+                </div>
+            
+        </div>    
+        <button type="submit" class="slogin">Crear Cuenta</button>
+    </form>
+    </div>
+
+    
+</div>
+
 <!-- footer -->
 <footer class="py-5">
-  <div class="container pt-md-5">
-    <div class="footer-logo mb-lg-5 mb-4 text-center">
-      <a class="navbar-brand" href="index.html"><span class="fa fa-bell-o"></span> Drawing Graphics</a>
-      <p>Queremos brindarte una gran experiencia. Tus comentarios nos ayudan
-        brindarle más detalles que amas y el servicio que esperas.</p>
+    <div class="container pt-md-5">
+        <div class="footer-logo mb-lg-5 mb-4 text-center">
+        <a class="navbar-brand" href="index.html"><span class="fa fa-bell-o"></span> Drawing Graphics</a>
+        <p>We want to provide you with a great experience. Your feedback helps us
+            bring you more of the events you love and the service you expect.</p>
+        </div>
+        <div class="footer-grid">
+        <div class="w3l-copyright text-center">
+            <ul class="d-flex justify-content-center">
+              <li class="mx-md-2 mx-1"><a href="https://www.facebook.com/Drawingraps/" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
+              <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
+              <li class="mx-md-2 mx-1"><a href="https://wa.me/message/GBELSTLL64NSO1" class="whatsapp"><span class="fab fa-whatsapp"></span></a></li>
+              <li class="mx-md-2 mx-1"><a href="https://www.instagram.com/drw.26/" class="instagram"><span class="fab fa-instagram"></span></a></li>  
+            </ul>
+            <p class="mt-4"> Tienda Online | <a href="http://w3layouts.com/"
+                target="=_blank"> Drawing Graphics
+              </a></p>
+        </div>
+        </div>
+    
     </div>
-    <div class="footer-grid">
-      <div class="w3l-copyright text-center">
-          <ul class="d-flex justify-content-center">
-            <li class="mx-md-2 mx-1"><a href="https://www.facebook.com/Drawingraps/" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="https://wa.me/message/GBELSTLL64NSO1" class="whatsapp"><span class="fab fa-whatsapp"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="https://www.instagram.com/drw.26/" class="instagram"><span class="fab fa-instagram"></span></a></li> 
-          </ul>
-        <p class="mt-4">Proyecto Final. Tienda Online | <a href="#"
-            target="=_blank"> Drawing Graphics
-          </a></p>
-      </div>
-    </div>
+</footer>	
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- cart-js -->
+	<script src="js/minicart.js"></script>
+	<script>
+		shoe.render();
 
-  </div>
-</footer>
-  <!-- footer -->
+		shoe.cart.on('shoe_checkout', function (evt) {
+			var items, len, i;
 
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) { }
+			}
+		});
+	</script>
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
     &#10548;
@@ -328,52 +381,22 @@
       });
     });
   </script>
-  <script>
-    // Obtener referencia a los elementos
-    const categoriaEscogida = document.getElementById('categoriaEscogida');
-    const categoryList = document.querySelector('.category_list');
-    const productosContainer = document.getElementById('productosContainer');
+    
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <script src="registro.js" ></script>
 
-    // Manejar el evento de clic en las categorías
-    categoryList.addEventListener('click', function (event) {
-        if (event.target.matches('a')) {
-            event.preventDefault();
-            const categoria = event.target.getAttribute('category');
-
-            // Filtrar y mostrar los productos según la categoría seleccionada
-            filtrarProductosPorCategoria(categoria);
-        }
-    });
-
-    // Filtrar y mostrar los productos según la categoría seleccionada
-    function filtrarProductosPorCategoria(categoria) {
-        const productos = document.querySelectorAll('.product-item');
-
-        productos.forEach(function (producto) {
-            const categoriaProducto = producto.getAttribute('category');
-
-            if (categoria === 'todos' || categoriaProducto === categoria) {
-                producto.style.display = 'block';
-            } else {
-                producto.style.display = 'none';
-            }
-        });
-    }
-</script>
-
-<!-- bootstrap js -->
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script src="editable.js"></script>
-<!-- <section class="modal-compra modal--show"> -->
-<section class="modal-compra">
-  <div class="container-modal-compra-exitosa">
-          <h2 class="modal-title">COMPRA EXITOSA</h2>
-          <img src="src/Joyas/check-removebg-preview.png" class="modal-img" alt="">
-          <p class="modal-close">Cerrar</p>
-  </div>
+  <script src="editable.js"></script>
+  <!-- <section class="modal-compra modal--show"> -->
+  <section class="modal-compra">
+    <div class="container-modal-compra-exitosa">
+            <h2 class="modal-title">COMPRA EXITOSA</h2>
+            <img src="src/Joyas/check-removebg-preview.png" class="modal-img" alt="">
+            <p class="modal-close">Cerrar</p>
+    </div>
 </section>
-
-  </body>
-
-  </html>
+</body>
+</html>

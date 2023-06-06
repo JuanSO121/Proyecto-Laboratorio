@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <title>Acceso</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- //custom-theme -->
+
+  <link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
+  <!-- Owl-carousel-CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/cart.css">
+  
+</head>
+
+<body>    
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke p-0">
+            <h1> <a class="navbar-brand" href="index.html">
+                    <span class="fa fa-bell-o"></span> Drawing Graphics</a>
+                </a></h1>
+            <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-lg-5 mr-lg-auto">
+                    <li class="nav-item @@home__active">
+                        <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item @@about__active">
+                      <a class="nav-link" href="about.html">Info</a>
+                    </li>
+                    <li class="nav-item @@registro__active">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item @@catalogo__active">
+                        <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
+                    </li>
+                    <li class="nav-item" id="cerrarS">
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="cerrar"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="cerrar"></a>
+                    </li>
+                </ul>
+                
+                <script>
+
+                        const usuario = document.getElementById("cerrar");
+                        const logIn = document.getElementById("cerrarS");
+            
+                        if (localStorage.getItem('mail')) {
+                          const elemento = localStorage.getItem('mail');
+                          usuario.innerHTML = '<li class="mx-md-2 mx-1"><a href="#" class="google"><span class="fa fa-user fa-lg"></span></a></li>'
+                          logIn.innerHTML = '<a class="nav-link" id="cerrarS" href="login.html">Cerrar Sesión</a>'
+                        } else {
+                          usuario.innerHTML = ""
+                          logIn.innerHTML = '<a class="nav-link" id="cerrarS" href="login.html">Iniciar Sesión</a>'
+                        }
+                  </script>
+
+
+                <!--/search-right-->
+                <div class="navbar-nav search-right nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#Pages" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-search"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="search_form">
+                            <form action="search-results.html" method="GET">
+                                <input type="text" placeholder="Search">
+                                <button type="submit" class="btn" value=""><span class="fa fa-search"
+                                        aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                        <div class="dropdown-divider" id="categoriaEscogida"></div>
+                        <div class="category_list"> 
+                            <a class="dropdown-item" category="todos" href="catalogo.html">Todos</a>
+                            <a class="dropdown-item" category="anillos" href="catalogo.html">Anillos</a>
+                            <a class="dropdown-item" category="pulseras" href="catalogo.html">Pulseras</a>
+                            <a class="dropdown-item" category="collares" href="catalogo.html">Collares</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--//search-right-->
+            </div>
+            <!-- toggle switch for light and dark theme -->
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                        <form class="carrito" action="login.html" method="post">
+                          <input type="hidden" name="cmd" value="_cart">
+                          <input type="hidden" name="add">
+                          <input type="hidden" name="shoe_item">
+                          <input type="hidden" name="amount">
+                          <button type="submit" class="cart"><img class="logo-cart" src="src/Joyas/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                          <a href="#" data-toggle="modal"></a>
+
+                      </form>
+                    </div>
+                </nav>
+            </div>
+            <!-- //toggle switch for light and dark theme -->
+        </nav>
+    </div>
+</header>
+
+<!--/header-->
+<!-- about breadcrumb -->
+<div class="w3l-about-breadcrumb w3l-search-results py-5 text-center">
+  <div class="container py-lg-4 py-md-3">
+    <div class="contenedor">
+      <div class="login">
+        <div class="titulo">
+          <h1>USER LOGIN</h1>
+        </div>
+        <form id="autenticacion" class="login-form">
+          <div class="imagen">
+            <label for="mail"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></label>
+            <input type="email" id="mail" name="user_mail" placeholder="User-solid@gmail.com" required>
+          </div>
+          <div class="imagen">
+            <input type="password" id="password" name="user_name" placeholder="************" required>
+            <label for="name"><i class="fa fa-key fa-2x" aria-hidden="true"></i></label>
+          </div>
+        
+          <div class="imagen">
+            <button type="submit" class="slogin">Iniciar sesión</button>
+          </div>
+        
+          <div class="imagen">
+            <a href="registro.html" class="sregister">Registrarse</a>
+          </div>
+        </form>
+        
+
+        <div class="footer-grid">
+          <div class="margen">
+            <ul class="d-flex justify-content-center">
+              <br>
+              <li class="mx-md-2 mx-1"><a href="#" class="google"><span class="fab fa-google fa-lg"></span></a></li> 
+              <li class="mx-md-2 mx-1"><a href="#" class="facebook"><span class="fab fa-facebook-f fa-lg"></span></a></li>
+              <li class="mx-md-2 mx-1"><a href="#" class="twitter"><span class="fab fa-twitter fa-lg"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Agrega SweetAlert al final del archivo HTML -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.scriptjs"></script>
+
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+  &#10548;
+</button>
+
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("movetop").style.display = "block";
+    } else {
+      document.getElementById("movetop").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<!-- /move top -->
+
+<script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+<script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
+
+<script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+
+<!-- owlcarousel -->
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for banner typing text -->
+<script>
+  function autoType(elementClass, typingSpeed) {
+    var thhis = $(elementClass);
+    thhis.css({
+      "position": "relative",
+      "display": "inline-block"
+    });
+    thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+    thhis = thhis.find(".text-js");
+    var text = thhis.text().trim().split('');
+    var amntOfChars = text.length;
+    var newString = "";
+    thhis.text("|");
+    setTimeout(function () {
+      thhis.css("opacity", 1);
+      thhis.prev().removeAttr("style");
+      thhis.text("");
+      for (var i = 0; i < amntOfChars; i++) {
+        (function (i, char) {
+          setTimeout(function () {
+            newString += char;
+            thhis.text(newString);
+          }, i * typingSpeed);
+        })(i + 1, text[i]);
+      }
+    }, 1500);
+  }
+
+  $(document).ready(function () {
+    // Now to start autoTyping just call the autoType function with the 
+    // class of outer div
+    // The second paramter is the speed between each letter is typed.   
+    autoType(".type-js", 200);
+  });
+</script>
+<!-- //script for banner typing text -->
+
+<!-- script for carousel slider -->
+<script>
+  $(document).ready(function () {
+    $("#owl-demo1").owlCarousel({
+      loop: true,
+      nav: false,
+      margin: 30,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        767: {
+          items: 2,
+          nav: false
+        },
+        992: {
+          items: 4,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for carousel slider -->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<style>
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+</style>
+
+<script src="editable.js"></script>
+<!-- <section class="modal-compra modal--show"> -->
+<section class="modal-compra">
+  <div class="container-modal-compra-exitosa">
+          <h2 class="modal-title">COMPRA EXITOSA</h2>
+          <img src="src/Joyas/check-removebg-preview.png" class="modal-img" alt="">
+          <p class="modal-close">Cerrar</p>
+  </div>
+</section>
+
+<script src="js/minicart.js"></script>
+<script>
+  shoe.render();
+
+  shoe.cart.on('shoe_checkout', function (evt) {
+    var items = this.items();
+    var productDetails = '';
+
+    if (this.subtotal() > 0) {
+      // Mostrar mensaje de pago exitoso y detalles de productos y valor total
+      alert('Pago exitoso.\n' + '\nValor total pagado: ' + this.total());
+    }
+  });
+</script>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+<script src="login.js" ></script>
+
+
+</html>

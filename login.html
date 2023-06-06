@@ -113,14 +113,13 @@
                                 <i class="gg-moon"></i>
                             </div>
                         </label>
-                        <form class="carrito" action="login.html" method="post">
+                        <form class="carrito" action="#" method="post">
                           <input type="hidden" name="cmd" value="_cart">
                           <input type="hidden" name="add">
                           <input type="hidden" name="shoe_item">
                           <input type="hidden" name="amount">
-                          <button type="submit" class="cart"><img class="logo-cart" src="src/Joyas/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
-                          <a href="#" data-toggle="modal"></a>
-
+                          <button type="submit" class="cart"><img class="logo-cart" src="images2/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                          <a href="#" data-toggle="modal" data-target="#myModal1"></a>
                       </form>
                     </div>
                 </nav>
@@ -137,7 +136,7 @@
     <div class="contenedor">
       <div class="login">
         <div class="titulo">
-          <h1>USER LOGIN</h1>
+          <h1>Iniciar Sesion</h1>
         </div>
         <form id="autenticacion" class="login-form">
           <div class="imagen">
@@ -323,6 +322,13 @@
     }
   });
 </script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <script src="registro.js" ></script>
+
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>Drawing Graphics</title>
-
+<link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
 <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/cart.css">
 <!-- Template CSS -->
@@ -81,6 +81,14 @@
                               <i class="gg-moon"></i>
                           </div>
                       </label>
+                      <form class="carrito" action="#" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="add">
+                        <input type="hidden" name="shoe_item">
+                        <input type="hidden" name="amount">
+                        <button type="submit" class="cart"><img class="logo-cart" src="images2/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                    </form>
                   </div>
               </nav>
           </div>
@@ -202,6 +210,20 @@
     </div>
   </footer>
   <!-- footer -->
+  <script src="js/minicart.js"></script>
+	<script>
+		shoe.render();
+
+		shoe.cart.on('shoe_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) { }
+			}
+		});
+	</script>
 
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
@@ -377,6 +399,12 @@
 
   <script src="editable.js"></script>
   <!-- <section class="modal-compra modal--show"> -->
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <script src="registro.js" ></script>
 
 
   </body>

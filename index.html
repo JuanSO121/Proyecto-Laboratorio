@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/style-starter.css">
   <link rel="stylesheet" href="colores.css">
   <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
 </head>
 
 <body>
@@ -83,6 +84,14 @@
                               <i class="gg-moon"></i>
                           </div>
                       </label>
+                      <form class="carrito" action="#" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="add">
+                        <input type="hidden" name="shoe_item">
+                        <input type="hidden" name="amount">
+                        <button type="submit" class="cart"><img class="logo-cart" src="images2/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                        <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                    </form>
                   </div>
               </nav>
           </div>
@@ -693,6 +702,19 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- cart-js -->
     <script src="js/minicart.js"></script>
+	<script>
+		shoe.render();
+
+		shoe.cart.on('shoe_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) { }
+			}
+		});
+	</script>
 <script>
     // Obtener referencia a los elementos
     const categoriaEscogida = document.getElementById('categoriaEscogida');
@@ -735,6 +757,13 @@
             <p class="modal-close">Cerrar</p>
     </div>
 </section>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <script src="registro.js" ></script>
+
 </body>
 
 </html>

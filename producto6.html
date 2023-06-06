@@ -13,89 +13,98 @@
     <link rel="stylesheet" href="css/categoria.css">
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/cart.css">
+  </head>
 
 <body>
-    <header id="site-header" class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg stroke p-0">
-                <h1> <a class="navbar-brand" href="index.html">
-                        <span class="fa fa-bell-o"></span> Drawing Graphics
-                    </a></h1>
-                <!-- if logo is image enable this   
-        <a class="navbar-brand" href="#index.html">
-            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-        </a> -->
-                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                </button>
-      
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ml-lg-5 mr-lg-auto">
-                        <li class="nav-item @@home__active">
-                            <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item @@about__active">
-                            <a class="nav-link" href="about.html">Info</a>
-                        </li>
-                        <li class="nav-item @@registro__active">
-                            <a class="nav-link" href="registro.html">Registro</a>
-                        </li>
-                        <li class="nav-item @@carrito__active">
-                            <a class="nav-link" href="carrito.html">Carrito de Compras</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
-                        </li>
-                    </ul>
-      
-                    <!--/search-right-->
-                    <div class="navbar-nav search-right nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#Pages" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="fa fa-search"></span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="search_form">
-                                <form action="search-results.html" method="GET">
-                                    <input type="text" placeholder="Search">
-                                    <button type="submit" class="btn" value=""><span class="fa fa-search"
-                                            aria-hidden="true"></span></button>
-                                </form>
-                            </div>
-                            <div class="dropdown-divider" id="categoriaEscogida"></div>
-                            <div class="category_list"> 
-                                <a class="dropdown-item" category="todos" href="catalogo3D.html">Todos</a>
-                                <a class="dropdown-item" category="mug" href="catalogo3D.html">Mugs</a>
-                                <a class="dropdown-item" category="retablo" href="catalogo3D.html">Retablos</a>
-                                <a class="dropdown-item" category="estampado" href="catalogo3D.html">Estampados</a>
-                            </div>
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke p-0">
+            <h1> <a class="navbar-brand" href="index.html">
+                    <span class="fa fa-bell-o"></span> Drawing Graphics
+                </a></h1>
+            <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-lg-5 mr-lg-auto">
+                    <li class="nav-item @@home__active">
+                        <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item @@about__active">
+                        <a class="nav-link" href="about.html">Info</a>
+                    </li>
+                    <li class="nav-item @@registro__active">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
+                    </li>
+                    <li class="nav-item @@login__active">
+                        <a class="nav-link" href="login.html">Iniciar Sesion</a>
+                    </li>
+                </ul>
+  
+                <!--/search-right-->
+                <div class="navbar-nav search-right nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#Pages" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-search"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="search_form">
+                            <form action="search-results.html" method="GET">
+                                <input type="text" placeholder="Search">
+                                <button type="submit" class="btn" value=""><span class="fa fa-search"
+                                        aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                        <div class="dropdown-divider" id="categoriaEscogida"></div>
+                        <div class="category_list"> 
+                            <a class="dropdown-item" category="todos" href="catalogo3D.html">Todos</a>
+                            <a class="dropdown-item" category="mug" href="catalogo3D.html">Mugs</a>
+                            <a class="dropdown-item" category="retablo" href="catalogo3D.html">Retablos</a>
+                            <a class="dropdown-item" category="estampado" href="catalogo3D.html">Estampados</a>
                         </div>
                     </div>
-                    
-                    <!--//search-right-->
                 </div>
-                <!-- toggle switch for light and dark theme -->
-                <div class="mobile-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox">
-                                <div class="mode-container">
-                                    <i class="gg-sun"></i>
-                                    <i class="gg-moon"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
-                <!-- //toggle switch for light and dark theme -->
-            </nav>
-        </div>
-    </header>
+                
+                <!--//search-right-->
+            </div>
+            <!-- toggle switch for light and dark theme -->
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                        <form class="carrito" action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add">
+                            <input type="hidden" name="shoe_item">
+                            <input type="hidden" name="amount">
+                            <button type="submit" class="cart"><img class="logo-cart" src="images2/shopping-cart.png" alt="" ><i aria-hidden="true"></i></button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <!-- //toggle switch for light and dark theme -->
+        </nav>
+    </div>
+</header>
 <!--/header-->
 <!-- about breadcrumb -->
 <div class="w3l-about-breadcrumb w3l-search-results py-5 text-center">
@@ -120,25 +129,28 @@
 								allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
 								execution-while-out-of-viewport execution-while-not-rendered web-share width="325"
 								height="500"
-								src="https://sketchfab.com/models/7d450bb714034fceaa7b59a0e564f46b/embed?autostart=1&camera=0&ui_theme=dark">
+								src="https://sketchfab.com/models/3802b13a5a0b45d49b669ec5cbb32090/embed?autostart=1">
 								</iframe>
 								<p style="font-size: 13px; font-weight: normal; margin: 5px;"> <a
-									href="https://sketchfab.com/3d-models/cup-7d450bb714034fceaa7b59a0e564f46b?utm_medium=embed&utm_campaign=share-popup&utm_content=7d450bb714034fceaa7b59a0e564f46b"
+									href="https://sketchfab.com/3d-models/t-shirt-metahuman-compatible-e8f460fd57dd41de810c1fbea68cce8f?utm_medium=embed&utm_campaign=share-popup&utm_content=e8f460fd57dd41de810c1fbea68cce8f"
 									target="_blank" style="font-weight: bold; color: #1CAAD9;"> Cup </a> by
 								<a href="https://sketchfab.com/dmytronikonov?utm_medium=embed&utm_campaign=share-popup&utm_content=7d450bb714034fceaa7b59a0e564f46b"
 									target="_blank" style="font-weight: bold; color: #1CAAD9;"> Dmytro Nikonov </a> on <a
-									href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7d450bb714034fceaa7b59a0e564f46b"
+									href="https://sketchfab.com/paladiiconstantin.1?utm_medium=embed&utm_campaign=share-popup&utm_content=e8f460fd57dd41de810c1fbea68cce8f"
 									target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-							</div>
+                </div>
+
+
+
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 align-self">
 				<div class="text-left">
 						
-							<h3 class="title-left mb-3">Posillo Neutral</h3>
-							<p><span class="item_price">$13000</span>
-								<del>$16000</del>
+							<h3 class="title-left mb-3">CAMISA ESTAMPADA V</h3>
+							<p><span class="item_price">$38.000</span>
+								<del>$40.000</del>
 								
 							</p>
 							<br>
@@ -168,8 +180,8 @@
 									<form action="#" method="post">
 										<input type="hidden" name="cmd" value="_cart">
 										<input type="hidden" name="add" value="1">
-										<input type="hidden" name="shoe_item" value="Posillo Neutral">
-										<input type="hidden" name="amount" value="2.81">
+										<input type="hidden" name="shoe_item" value="camisa estampada v">
+										<input type="hidden" name="amount" value="38.000">
 										<input type="submit" name="submit" value="Add to cart" class="btn btn-style btn-primary">
 			
 										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
